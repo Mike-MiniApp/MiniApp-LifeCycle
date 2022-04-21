@@ -10,30 +10,38 @@ import UIKit
 class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
-        print("loadView")
+        print("1: loadView")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
+        print("2: viewDidLoad")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
+        print("3: viewWillAppear")
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("4: viewWillLayoutSubviews")
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print("viewDidLayoutSubviews")
+        print("5: viewDidLayoutSubviews")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("viewDidApper")
+        print("6: viewDidApper")
     }
+
+    // 画面が非表示になる時の処理
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("7: viewWillDisappear")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        print("8: viewDidDisappear")
     }
 
 }
